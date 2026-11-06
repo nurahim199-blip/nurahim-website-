@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<title>NURAHIM PRO</title>
+
+<style>
+body {
+    background: linear-gradient(45deg, #101020, #202060);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding: 30px;
+    animation: backgroundMove 5s infinite alternate;
+}
+
+h1 {
+    color: yellow;
+    animation: glow 2s infinite alternate;
+}
+
+.avatar {
+    font-size: 90px;
+    animation: bounce 2s infinite;
+}
+
+button {
+    background: blue;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px yellow; }
+    to { text-shadow: 0 0 25px yellow; }
+}
+
+@keyframes backgroundMove {
+    from { background-color: #101020; }
+    to { background-color: #303080; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>NURAHIM PRO 🚀</h1>
+
+<div class="avatar">👨‍💻</div>
+
+<h2>Салам! Мен Нурахиммин</h2>
+
+<p>Мен келечекте күчтүү программист болгум келет!</p>
+
+<h2 id="clock"></h2>
+
+<button onclick="document.getElementById('info').innerHTML='Мен IT үйрөнүп жатам! 💻'">
+Мен жөнүндө
+</button>
+
+<button onclick="document.getElementById('message').innerHTML='🔥 NURAHIM PRO сайтына кош келиңиз!'">
+Басып көр
+</button>
+
+<h2 id="message"></h2>
+
+<h2 id="info"></h2>
+
+<script>
+function updateClock() {
+    document.getElementById("clock").innerHTML =
+    new Date().toLocaleTimeString();
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
